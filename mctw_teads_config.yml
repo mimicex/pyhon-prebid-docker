@@ -62,6 +62,7 @@ creative: # at least one of the following types is required {video, banner}
     # safe_frame: False # optional: defaults to True
     # size_override: False # optional: defaults to True with a 1x1 creative
     size_override: True
+    # 素材尺寸可多組
     sizes: # list
       - height: 600
         width: 300
@@ -143,8 +144,10 @@ targeting:
 #   placement_names: # list of names (optional)
 #     - "placement name 1"
 #     - "placement name 2"
+  # 此設定為廣告單元可複數
   ad_unit_names: # list of names (optional)
-    - "廣告空間名稱"
+    - "廣告單元名稱1"
+    - "廣告單元名稱2"
 ###############################################################################
 # Rate (required)
 # Allowed Templating Key Words: None
@@ -157,16 +160,21 @@ targeting:
 #   2. all currency values are rounded to two decimal places (closest hundreth)
 ###############################################################################
 rate:
+  # 幣值，沒有台幣
   currency: "USD" # required
   granularity:
+    # 自訂價格區間
     type: "custom" # required, choices: "low", "med", "high", "auto", "dense", "custom"
     custom: # optional, requires type "custom" above
+      # 0.01 ~ 3.00 每一區塊為 0.01元
       - min: 0.01
         max: 3.00
         interval: 0.01
+      # 3.00 ~ 8.00 每一區塊為 0.05元
       - min: 3.00
         max: 8.00
         interval: 0.05
+      # 8.00 ~ 20.00 每一區塊為 0.5元
       - min: 8.00
         max: 20.00
         interval: 0.5
