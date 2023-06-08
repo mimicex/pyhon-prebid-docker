@@ -6,7 +6,7 @@ docker build -t mctw_prebid:latest .
 
 2. clone prebid
 ```
-git clone https://github.com/mimicex/pyhon-prebid-docker.git
+git clone https://github.com/prebid/Prebid.js.git
 ```
 
 3. run container
