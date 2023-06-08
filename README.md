@@ -1,13 +1,15 @@
 # 如何建立 prebid docker 環境
-1. 建立image
+
+1. clone prebid
+```
+git clone https://github.com/prebid/Prebid.js.git
+```
+
+2. 建立image
 ```
 docker build -t mctw_prebid:latest .
 ```
 
-2. clone prebid
-```
-git clone https://github.com/prebid/Prebid.js.git
-```
 
 3. run container
  ```
